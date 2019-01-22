@@ -2,16 +2,19 @@
   <div>
     <!-- <el-button type="primary" icon="el-icon-edit"></el-button> -->
 
+    <div>Badge from Buefy:</div>
     <b-badge
       :slots="{
         title: 'Address or Intersection Found',
         value: 'test'
       }"
     ></b-badge>
+    <br><br>
 
     <!-- <b-input></b-input> -->
     <!-- <b-table :data="data" :columns="columns"></b-table> -->
 
+    <div>Aaa and Aab from element-ui:</div>
     <bdg
       :slots="{
         title: 'Address or Intersection Found',
@@ -25,6 +28,7 @@
                   href: 'https://openmaps.phila.gov'
                }"
     />
+    <br><br>
     <!-- v-if="false" -->
 
     <!-- <badge
@@ -39,6 +43,8 @@
         text: 'Address or Intersection Found',
       }"
     /> -->
+
+    <div>External Link and Badge from rollup_vue_5</div>
 
     <external-link class="ib"
                :options="{
@@ -61,25 +67,6 @@
 
   import ExternalLink from 'rollup_vue_5/src/components/ExternalLink/ExternalLink.vue';
   import Badge from 'rollup_vue_5/src/components/Badge/Badge.vue';
-
-  // import { ExternalLink } from 'rollup_vue_4';
-  // import ExternalLink from '../../node_modules/rollup_vue_4/src/components/ExternalLink.vue';
-  // import { Badge } from 'rollup_vue_4';
-
-  // import Vue from 'vue';
-  // import { ExternalLink } from 'comps_test';
-  // import map from 'lodash/map';
-  // import ExternalLink from 'comps_test';
-  // import * as rollupTest from 'rollup_test';
-  // console.log('rollupTest:', rollupTest);
-  // import { ExternalLink as Ext } from 'rollup_test';
-  // console.log('ExternalLink:', ExternalLink);
-  // import ExternalLink from '../../node_modules/comps_test/components/ExternalLink.vue';
-  // import { Callout } from 'rollup_test/Callout.vue';
-  // import { Badge } from 'comps_test';
-  // import Badge from '../../node_modules/comps_test/components/Badge.vue';
-  // import Badge from '../../node_modules/rollup_test/src/components/Badge.vue'
-  // import Callout from '../../node_modules/rollup_test/src/components/Callout.vue'
 
   export default {
 

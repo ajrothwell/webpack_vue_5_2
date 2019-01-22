@@ -19,12 +19,12 @@ Vue.component('EtnlLnk', Aab);
 
 // import { Table } from 'buefy/dist/components/table'
 // import { Input } from 'buefy/dist/components/input'
-// import { Badge } from 'buefy/dist/components/badge'
+import { Badge } from 'buefy/dist/components/badge'
 import 'buefy/dist/components/badge/index.min.css'
 // import 'buefy/dist/buefy.css'
 
 // import Badge from 'rollup_vue_5/dist/components/Badge'
-import Badge from 'rollup_vue_5/dist/components/Badge/Badge.vue';
+// import Badge from 'rollup_vue_5/dist/components/Badge/Badge.vue';
 
 
 // Vue.component('b-table', Table)

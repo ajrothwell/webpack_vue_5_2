@@ -9,7 +9,7 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
-    "buefy": "https://github.com/ajrothwell/buefy#dda3b241a35bd7e4274df1f89730798b2bfda750",
+    "buefy": "https://github.com/ajrothwell/buefy#2c0bb1398a6fb095abab7c56905ae3f352ad171d",
     "element-ui": "https://github.com/ajrothwell/element#42c2ceb4b17362e8ebaba5114e4daee10a06c8f0",
     "phila-standards": "^1.0.2",
     "rollup_vue_5": "https://github.com/ajrothwell/rollup_vue_5#793d6a232498cd8bdd3da88c9880de7d3218d1eb",
