@@ -1,0 +1,40 @@
+{
+  "name": "webpack_vue_3",
+  "sideEffects": false,
+  "version": "1.0.0",
+  "main": "",
+  "license": "MIT",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production npx webpack --display-modules",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server"
+  },
+  "dependencies": {
+    "buefy": "https://github.com/ajrothwell/buefy#dda3b241a35bd7e4274df1f89730798b2bfda750",
+    "element-ui": "https://github.com/ajrothwell/element#42c2ceb4b17362e8ebaba5114e4daee10a06c8f0",
+    "phila-standards": "^1.0.2",
+    "rollup_vue_3_2": "https://github.com/ajrothwell/rollup_vue_3_2#eac287891a5d01238fd8c6dc8cc7218b3d8322e4",
+    "vue": "^2.5.22",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-syntax-dynamic-import": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/register": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "babel-plugin-component": "^1.1.1",
+    "babel-plugin-dynamic-import-node-babel-7": "^2.0.7",
+    "cross-env": "^5.2.0",
+    "css-loader": "^2.1.0",
+    "file-loader": "^2.0.0",
+    "style-loader": "^0.23.1",
+    "uglifyjs-webpack-plugin": "^2.0.1",
+    "url-loader": "^1.1.2",
+    "vue-loader": "^15.5.1",
+    "vue-template-compiler": "^2.5.22",
+    "webpack": "^4.27.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10",
+    "webpack-visualizer-plugin": "^0.1.11"
+  }
+}
