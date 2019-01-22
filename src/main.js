@@ -33,8 +33,11 @@ Vue.component('EtnlLnk', Aab);
 
 // import { Table } from 'buefy/dist/components/table'
 // import { Input } from 'buefy/dist/components/input'
-import { Badge } from 'buefy/dist/components/badge'
-import 'buefy/dist/components/badge/index.min.css'
+import { Badge } from 'buefy/dist/components/Badge'
+import 'buefy/dist/components/Badge/index.min.css'
+
+import { ExternalLink } from 'buefy/dist/components/ExternalLink'
+import 'buefy/dist/components/ExternalLink/index.min.css'
 // import 'buefy/dist/buefy.css'
 
 // import Badge from 'rollup_vue_5/dist/components/Badge'
@@ -43,7 +46,8 @@ import 'buefy/dist/components/badge/index.min.css'
 
 // Vue.component('b-table', Table)
 // Vue.component('b-input', Input)
-Vue.component('b-badge', Badge)
+Vue.component('b-badge', Badge);
+Vue.component('b-external-link', ExternalLink);
 
 // import '../node_modules/phila-standards/dist/css/phila-standards.min.css';
 

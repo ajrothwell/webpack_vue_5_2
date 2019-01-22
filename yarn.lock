@@ -1089,9 +1089,9 @@ browserslist@^4.3.4:
     electron-to-chromium "^1.3.103"
     node-releases "^1.1.3"
 
-"buefy@https://github.com/ajrothwell/buefy#2c0bb1398a6fb095abab7c56905ae3f352ad171d":
+"buefy@https://github.com/ajrothwell/buefy#57a63df6751ac99389f6a67c298b8fb83030bfdd":
   version "0.7.2"
-  resolved "https://github.com/ajrothwell/buefy#2c0bb1398a6fb095abab7c56905ae3f352ad171d"
+  resolved "https://github.com/ajrothwell/buefy#57a63df6751ac99389f6a67c298b8fb83030bfdd"
   dependencies:
     bulma "0.7.2"
 

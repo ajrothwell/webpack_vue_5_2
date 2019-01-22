@@ -2,13 +2,19 @@
   <div>
     <!-- <el-button type="primary" icon="el-icon-edit"></el-button> -->
 
-    <div>Badge from Buefy:</div>
+    <div>components from Buefy:</div>
     <b-badge
       :slots="{
         title: 'Address or Intersection Found',
         value: 'test'
       }"
     ></b-badge>
+    <b-external-link class="ib"
+               :options="{
+                  data: 'openmaps.phila.gov',
+                  href: 'https://openmaps.phila.gov'
+               }"
+    />
     <br><br>
 
     <!-- <b-input></b-input> -->
