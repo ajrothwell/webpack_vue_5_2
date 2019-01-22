@@ -59,8 +59,8 @@
 
 <script>
 
-  import ExternalLink from '../../node_modules/rollup_vue_5/src/components/ExternalLink/ExternalLink.vue';
-  import Badge from '../../node_modules/rollup_vue_5/src/components/Badge/Badge.vue'
+  import ExternalLink from 'rollup_vue_5/src/components/ExternalLink/ExternalLink.vue';
+  import Badge from 'rollup_vue_5/src/components/Badge/Badge.vue';
 
   // import { ExternalLink } from 'rollup_vue_4';
   // import ExternalLink from '../../node_modules/rollup_vue_4/src/components/ExternalLink.vue';
