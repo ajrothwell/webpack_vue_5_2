@@ -15,6 +15,10 @@
                   href: 'https://openmaps.phila.gov'
                }"
     />
+    <b-address-input :widthFromConfig="415"
+                   :placeholder="null"
+    >
+  </b-address-input>
     <br><br>
 
     <!-- <b-input></b-input> -->

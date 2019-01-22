@@ -38,7 +38,9 @@ import 'buefy/dist/components/Badge/index.min.css'
 
 import { ExternalLink } from 'buefy/dist/components/ExternalLink'
 import 'buefy/dist/components/ExternalLink/index.min.css'
-// import 'buefy/dist/buefy.css'
+
+import { AddressInput } from 'buefy/dist/components/AddressInput'
+import 'buefy/dist/components/AddressInput/index.min.css'
 
 // import Badge from 'rollup_vue_5/dist/components/Badge'
 // import Badge from 'rollup_vue_5/dist/components/Badge/Badge.vue';
@@ -48,6 +50,7 @@ import 'buefy/dist/components/ExternalLink/index.min.css'
 // Vue.component('b-input', Input)
 Vue.component('b-badge', Badge);
 Vue.component('b-external-link', ExternalLink);
+Vue.component('b-address-input', AddressInput);
 
 // import '../node_modules/phila-standards/dist/css/phila-standards.min.css';
 
