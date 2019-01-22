@@ -9,12 +9,17 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.12",
+    "@fortawesome/pro-light-svg-icons": "^5.6.3",
+    "@fortawesome/pro-regular-svg-icons": "^5.6.3",
+    "@fortawesome/pro-solid-svg-icons": "^5.6.3",
+    "@fortawesome/vue-fontawesome": "^0.1.5",
     "buefy": "https://github.com/ajrothwell/buefy#2c0bb1398a6fb095abab7c56905ae3f352ad171d",
     "element-ui": "https://github.com/ajrothwell/element#42c2ceb4b17362e8ebaba5114e4daee10a06c8f0",
     "phila-standards": "^1.0.2",
     "rollup_vue_5": "https://github.com/ajrothwell/rollup_vue_5#793d6a232498cd8bdd3da88c9880de7d3218d1eb",
     "vue": "^2.5.22",
-    "vuex": "^3.0.1"
+    "vuex": "^3.1.0"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",

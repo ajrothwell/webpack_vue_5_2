@@ -1,7 +1,7 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import mergeDeep from './util/merge-deep';
-import { pvcStore } from 'rollup-test';
+import pvcStore from 'rollup_vue_5/src/store.js';
 
 // when you load vuex from a script tag this seems to happen automatically
 Vue.use(Vuex);
