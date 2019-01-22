@@ -23,7 +23,8 @@ Vue.component('EtnlLnk', Aab);
 import 'buefy/dist/components/badge/index.min.css'
 // import 'buefy/dist/buefy.css'
 
-import Badge from 'rollup_vue_3_2/dist/components/Badge'
+// import Badge from 'rollup_vue_5/dist/components/Badge'
+import Badge from 'rollup_vue_5/dist/components/Badge/Badge.vue';
 
 
 // Vue.component('b-table', Table)

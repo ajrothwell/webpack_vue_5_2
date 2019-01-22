@@ -1,5 +1,5 @@
 {
-  "name": "webpack_vue_3",
+  "name": "webpack_vue_5_2",
   "sideEffects": false,
   "version": "1.0.0",
   "main": "",
@@ -12,7 +12,7 @@
     "buefy": "https://github.com/ajrothwell/buefy#dda3b241a35bd7e4274df1f89730798b2bfda750",
     "element-ui": "https://github.com/ajrothwell/element#42c2ceb4b17362e8ebaba5114e4daee10a06c8f0",
     "phila-standards": "^1.0.2",
-    "rollup_vue_3_2": "https://github.com/ajrothwell/rollup_vue_3_2#eac287891a5d01238fd8c6dc8cc7218b3d8322e4",
+    "rollup_vue_5": "https://github.com/ajrothwell/rollup_vue_5#793d6a232498cd8bdd3da88c9880de7d3218d1eb",
     "vue": "^2.5.22",
     "vuex": "^3.0.1"
   },
