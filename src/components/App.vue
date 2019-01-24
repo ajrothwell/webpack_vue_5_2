@@ -1,73 +1,133 @@
 <template>
   <div>
-    <!-- <el-button type="primary" icon="el-icon-edit"></el-button> -->
 
-    <div>components from Buefy:</div>
-    <b-badge
-      :slots="{
-        title: 'Address or Intersection Found',
-        value: 'test'
-      }"
+    <h4 class="margin-sides-20">components from Buefy:</h4>
+
+    <b-badge class="margin-sides-20"
+            :slots="{
+              title: 'Address or Intersection Found',
+              value: 'test'
+            }"
     ></b-badge>
-    <b-external-link class="ib"
-               :options="{
-                  data: 'openmaps.phila.gov',
-                  href: 'https://openmaps.phila.gov'
-               }"
+
+    <b-external-link class="ib margin-sides-20"
+                     :options="{
+                        data: 'openmaps.phila.gov',
+                        href: 'https://openmaps.phila.gov'
+                     }"
     />
-    <b-address-input :widthFromConfig="415"
-                   :placeholder="null"
+
+    <b-callout class="margin-sides-20"
+              :slots="{
+                text: 'Buefy callout test',
+              }"
+    />
+
+    <b-any-header class="margin-sides-20"
+                  :options="{
+                      headerType: 'h1'
+                  }"
+                  :slots="{
+                      text: 'test h1 text'
+                  }"
+    />
+
+    <b-address-input class="margin-sides-20"
+                    :widthFromConfig="415"
+                    :placeholder="null"
     >
-  </b-address-input>
+    </b-address-input>
+
+    <b-horizontal-table class="margin-20 medium-10"
+                      :slots="horizontalTable_01_Slots"
+                      :options="horizontalTable_01_Options"
+    />
+
+    <div class="margin-sides-20 component-label">vertical-table:</div>
+      <b-vertical-table
+        class="margin-20 margin-bottom-60 medium-8"
+        :slots="{
+          fields: [
+            {
+              label: 'address',
+              value: function(state) {
+                return state.geocode.data.properties.street_address || '';
+              },
+            },
+            {
+              label: 'opa #',
+              value: function(state) {
+                return state.geocode.data.properties.opa_account_num;
+              },
+            },
+            {
+              label: 'owner',
+              value: function(state) {
+                return state.sources.opa.data.owner_1;
+              },
+            },
+          ]
+        }"
+        :options="{
+          id: 'verticalTableId',
+          dataSources: ['opa'],
+          export: {
+            formatButtons: {
+              'csv': 'CSV',
+              'pdf': 'PDF'
+            },
+            file: function(state) { return state.geocode.data.properties.opa_account_num + '_opaData'; },
+            introLines: [
+              function(state) { return state.geocode.data.properties.opa_account_num; },
+            ],
+          },
+          externalLink: {
+            action: function() {
+              return 'See more';
+            },
+            name: 'Atlas',
+            href: 'https://atlas.phila.gov'
+          }
+        }"
+      />
+
     <br><br>
 
-    <!-- <b-input></b-input> -->
-    <!-- <b-table :data="data" :columns="columns"></b-table> -->
 
-    <div>Aaa and Aab from element-ui:</div>
-    <bdg
-      :slots="{
-        title: 'Address or Intersection Found',
-        value: 'test'
-      }"
+
+
+    <h4 class="margin-sides-20">Aaa and Aab from element-ui:</h4>
+    <bdg class="margin-sides-20"
+          :slots="{
+            title: 'Address or Intersection Found',
+            value: 'test'
+          }"
     ></bdg>
 
-    <etnl-lnk class="ib"
+    <etnl-lnk class="ib margin-sides-20"
                :options="{
                   data: 'openmaps.phila.gov',
                   href: 'https://openmaps.phila.gov'
                }"
     />
     <br><br>
-    <!-- v-if="false" -->
 
-    <!-- <badge
-      :slots="{
-        title: 'Address or Intersection Found',
-        value: 'test'
-      }"
-    /> -->
 
-    <!-- <callout
-      :slots="{
-        text: 'Address or Intersection Found',
-      }"
-    /> -->
 
-    <div>External Link and Badge from rollup_vue_5</div>
+    <h4 class="margin-sides-20">External Link and Badge from rollup_vue_5</h4>
 
-    <external-link class="ib"
+    <external-link class="ib margin-sides-20"
                :options="{
                   data: 'openmaps.phila.gov',
                   href: 'https://openmaps.phila.gov'
                }"
     />
 
-    <badge
-      :slots="{
-        title: 'Address or Intersection Found',
-        value: 'test'
-      }"
+    <badge class="margin-sides-20"
+          :slots="{
+            title: 'Address or Intersection Found',
+            value: 'test'
+          }"
     />
 
   </div>
@@ -86,7 +146,106 @@
       Badge,
       // Callout
     },
-    // data() {
+    data() {
+      const data = {
+        horizontalTable_01_Options: {
+          id: 'testHorizTable_01',
+          export: {
+            formatButtons: {
+              'csv': 'CSV',
+              'pdf': 'PDF'
+            },
+            file: function(state) { return state.geocode.data.properties.li_address_key + '_BusinessLicenses'; },
+            introLines: [
+              function(state) { return state.geocode.data.properties.li_address_key; },
+            ],
+          },
+          totalRow: {
+            enabled: false,
+          },
+          limit: 5,
+          filters: [
+            {
+              type: 'time',
+              getValue: function(item) {
+                return item['mostrecentissuedate'];
+              },
+              label: 'From the last',
+              values: [
+                {
+                  label: '30 days',
+                  value: '30',
+                  unit: 'days',
+                  direction: 'subtract',
+                },
+                {
+                  label: '90 days',
+                  value: '90',
+                  unit: 'days',
+                  direction: 'subtract',
+                },
+                {
+                  label: 'year',
+                  value: '1',
+                  unit: 'years',
+                  direction: 'subtract',
+                }
+              ]
+            }
+          ],
+          fields: [
+            {
+              label: 'Most Recent Issue Date',
+              value: function(state, item){
+                return item['mostrecentissuedate'];
+              },
+              transforms: [
+                'date'
+              ]
+            },
+            {
+              label: 'License Number',
+              value: function(state, item){
+                return item['licensenum'];
+              }
+            },
+            {
+              label: 'License Type',
+              value: function(state, item){
+                return item['licensetype'];
+              }
+            },
+            {
+              label: 'Business Name',
+              value: function(state, item){
+                return item['business_name'];
+              }
+            },
+          ],
+          externalLink: {
+            action: function(count) {
+              return 'See ' + count + ' older permits at L&I Property History';
+            },
+            name: 'L&I Property History',
+            href: function(state) {
+              return 'http://li.phila.gov/';
+            }
+          }
+        },
+        horizontalTable_01_Slots: {
+          title: 'Business Licenses',
+          items: function(state) {
+            var data;
+            if (state.sources.liBusinessLicenses.data) {
+              data = state.sources.liBusinessLicenses.data.rows
+            }
+            return data;
+          },
+        },
+      }
+      return data;
+    },
+
     //   return {
     //     data: [
     //       { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016-10-15 13:43:27', 'gender': 'Male' },
@@ -163,3 +322,33 @@
   }
 
 </script>
+
+<style scoped>
+#app-root {
+  height: 100%
+}
+#components-root {
+  padding: 20px;
+  height: 90%;
+  overflow-y: auto;
+}
+.component-label {
+  font-size: 20px;
+}
+.margin-sides-20 {
+  display: block;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.margin-20 {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+.margin-bottom-60 {
+  margin-bottom: 60px !important;
+}
+.ib {
+  display: inline-block;
+}
+</style>

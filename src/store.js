@@ -2,20 +2,22 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import mergeDeep from './util/merge-deep';
 import pvcStore from 'rollup_vue_5/src/store.js';
+import pvdStore from '../node_modules/@cityofphiladelphia/phila-vue-datafetch/src/controller/store.js';
 
 // when you load vuex from a script tag this seems to happen automatically
 Vue.use(Vuex);
 
-function createStore() {
+function createStore(config) {
+  console.log('in store.js, config:', config);
 
-  // const sources = pvdStore.createSources(config);
-  // const parcels = pvdStore.createParcels(config);
+  const sources = pvdStore.createSources(config);
+  const parcels = pvdStore.createParcels(config);
 
   const initialState = {
     candidates: [],
     addressEntered: null,
-    // parcels,
-    // sources,
+    parcels,
+    sources,
     activeFeature: {
       featureId: null,
       tableId: null
@@ -55,8 +57,10 @@ function createStore() {
     }
   }
 
-  let mergeStore = mergeDeep(pvcStore, mb);
+  // let mergeStore = mergeDeep(pvcStore, mb);
   // console.log('mergeStore:', mergeStore);
+  let mergeStore = mergeDeep(pvdStore.store, pvcStore);
+  mergeStore = mergeDeep(mergeStore, mb);
 
   // TODO standardize how payloads are passed around/handled
   return new Vuex.Store({

@@ -18,7 +18,7 @@ module.exports = {
   resolve: {
     mainFields: ['module', 'main', 'browser'],
     alias: {
-      vue$: "vue/dist/vue.runtime.js",
+      vue$: "vue/dist/vue.js",
       vuex$: "vuex/dist/vuex.esm.js"
     }
     // extensions: [".js", ".jsx"],
@@ -45,7 +45,7 @@ module.exports = {
       // },
       {
         test: /\.js/,
-        // exclude: /node_modules/,
+        exclude: /node_modules/,
         use: {
           loader: "babel-loader",
           options: {

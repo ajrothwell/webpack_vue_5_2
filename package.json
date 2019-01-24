@@ -9,12 +9,14 @@
     "dev": "cross-env NODE_ENV=development webpack-dev-server"
   },
   "dependencies": {
+    "@cityofphiladelphia/phila-vue-datafetch": "^0.0.13",
     "@fortawesome/fontawesome-svg-core": "^1.2.12",
     "@fortawesome/pro-light-svg-icons": "^5.6.3",
     "@fortawesome/pro-regular-svg-icons": "^5.6.3",
     "@fortawesome/pro-solid-svg-icons": "^5.6.3",
     "@fortawesome/vue-fontawesome": "^0.1.5",
-    "buefy": "https://github.com/ajrothwell/buefy#57a63df6751ac99389f6a67c298b8fb83030bfdd",
+    "accounting": "^0.4.1",
+    "buefy": "https://github.com/ajrothwell/buefy#7b2c0555ef8a7987e75a95ee87c5a5b53e6487c0",
     "element-ui": "https://github.com/ajrothwell/element#42c2ceb4b17362e8ebaba5114e4daee10a06c8f0",
     "phila-standards": "^1.0.2",
     "rollup_vue_5": "https://github.com/ajrothwell/rollup_vue_5#793d6a232498cd8bdd3da88c9880de7d3218d1eb",
