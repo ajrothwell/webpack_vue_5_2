@@ -21,6 +21,9 @@
               :slots="{
                 text: 'Buefy callout test',
               }"
+              :options="{
+                components: calloutComponents_01
+              }"
     />
 
     <b-any-header class="margin-sides-20"
@@ -148,6 +151,15 @@
     },
     data() {
       const data = {
+        calloutComponents_01: [
+          {
+            type: 'b-badge',
+            slots: {
+              title: 'badge inside callout',
+              value: 'badge in callout value'
+            }
+          }
+        ],
         horizontalTable_01_Options: {
           id: 'testHorizTable_01',
           export: {
